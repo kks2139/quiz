@@ -1,20 +1,23 @@
 import React from "react";
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {GrClose} from 'react-icons/gr';
+import {VscClose} from 'react-icons/vsc';
+import {IoIosCloseCircleOutline} from 'react-icons/io';
 
 interface Props {
     width?: string
     height?: string
     onClose: ()=>void
+    children: JSX.Element
 }
 
-const Popup: React.FC<Props> = ({width='300px', height='300px', onClose, children})=>{
+function Popup({width='50%', height='50%', onClose, children}: Props){
     return (
         <>
             <div css={style} style={{width, height}}>
                 <div className='header'>
-                    <GrClose size='30' onClick={()=>{onClose()}}/>
+                    {/* <VscClose size='50' color='white' onClick={()=>{onClose()}}/> */}
+                    <IoIosCloseCircleOutline size='50' color='white' onClick={()=>{onClose()}}/>
                 </div>
                 <div className='content'>
                     {children}
@@ -36,14 +39,13 @@ const style = css`
     box-shadow: 0 0 20px -5px black;
     z-index: 11;
     > .header {
-        // border: 1px solid red;
         height: 50px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
         svg {
             cursor: pointer;
-            color: white;
+            margin-top: 10px;
         }
     }
     > .content {

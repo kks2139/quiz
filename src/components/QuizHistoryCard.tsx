@@ -60,7 +60,8 @@ const style = css`
         }
     }
     > .chart {
-        width: 130px;
+        width: 140px;
+        background-color: var(--color-light-black);
     }
     &:hover {
         box-shadow: 0 0 0 2px var(--color-dark-blue);

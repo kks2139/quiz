@@ -6,6 +6,7 @@ import {IoMdArrowRoundDown} from 'react-icons/io';
 import {useDispatch} from 'react-redux';
 import {RouteComponentProps} from 'react-router-dom';
 import {setQuizList} from '../redux-modules/quizList';
+import {ToolTip} from '../components/index';
 
 
 function StartPage({history}: RouteComponentProps){
@@ -33,8 +34,12 @@ function StartPage({history}: RouteComponentProps){
             <div className='txt'>클릭하여 퀴즈를 풀어보세요!</div>
             <IoMdArrowRoundDown size='40'></IoMdArrowRoundDown>
             <div className='btn-wrapper'>
-                <div className='menu-btn' data-type='quiz' onClick={onClick}>퀴즈 풀기</div>
-                <div className='menu-btn' data-type='hist' onClick={onClick}>기록 보기</div>
+                <ToolTip text='퀴즈는 3가지 카테고리중 하나가 선택됩니다.'>
+                    <div className='menu-btn' data-type='quiz' onClick={onClick}>퀴즈 풀기</div>
+                </ToolTip>
+                <ToolTip text='퀴즈를 풀고 저장한 결과를 볼 수 있습니다.'>
+                    <div className='menu-btn' data-type='hist' onClick={onClick}>기록 보기</div>
+                </ToolTip>
             </div>
         </div>
     );
@@ -49,7 +54,6 @@ const style = css`
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    // background-color: black;
     .txt {
         font-size: 25px;
     }

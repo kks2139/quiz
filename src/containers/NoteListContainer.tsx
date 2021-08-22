@@ -13,7 +13,7 @@ interface Props {
 function NoteListContainer({info}: Props){
     const quizState = useSelector((state: RootState) => state.quizList);
     const {resultList, resultTime, resultDate} = info ? info : quizState.resultInfo;
-    const category = info ? info.category : quizState.quizList[0].category;
+    const category = info ? info.category : quizState.quizList.length > 0 ? quizState.quizList[0].category : '';
     const dispatch = useDispatch();
     
     const onSave = ()=>{

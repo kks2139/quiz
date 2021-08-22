@@ -3,9 +3,9 @@ import React from 'react';
 import {css} from '@emotion/react';
 import {RouteComponentProps} from 'react-router-dom';
 import {ChartBoxContainer} from '../containers/index';
+import {ToolTip} from '../components/index';
 import {useSelector} from 'react-redux';
 import {RootState} from '../redux-modules/index';
-import {FaCheck} from 'react-icons/fa';
 
 function ResultPage({history}: RouteComponentProps){
     const quizState = useSelector((state: RootState)=> state.quizList);
@@ -30,7 +30,9 @@ function ResultPage({history}: RouteComponentProps){
                     <div className='btn-wrapper'>
                         <div className='button' onClick={onClickDoAgain}>다시풀기</div>
                         <div className='button' onClick={onClickToStart}>처음으로</div>
-                        <div className='button' onClick={onClickToWrongAns}>오답노트 작성</div>
+                        <ToolTip text='오답노트를 작성하고 기록을 남겨보세요.'>
+                            <div className='button' onClick={onClickToWrongAns}>오답노트 작성</div>
+                        </ToolTip>
                     </div>
                 </div>
                 <div className='content'>
@@ -67,6 +69,7 @@ const style = css`
     align-items: center;
     min-height: 100vh;
     color: white;
+    overflow-x: hidden;
     > .wrapper {
         width: 900px;
         height: 600px;

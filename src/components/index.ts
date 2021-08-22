@@ -10,6 +10,7 @@ import ConfirmMessage from "./ConfirmMessage";
 import QuizHistoryList from "./QuizHistoryList";
 import QuizHistoryCard from "./QuizHistoryCard";
 import Popup from "./Popup";
+import ToolTip from "./ToolTip";
 
 
 export {
@@ -24,5 +25,6 @@ export {
     ConfirmMessage,
     QuizHistoryList,
     QuizHistoryCard,
-    Popup
+    Popup,
+    ToolTip
 };

@@ -78,11 +78,15 @@ const style = css`
                 width: 140px;
                 background-color: var(--color-dark-navy);
             }
+            .val {
+                flex-grow: 1;
+                background-color: var(--color-light-black);
+                padding-right: 5px;
+                width: calc(100% - 150px);
+            }
             .ta {
                 flex-grow: 1;
-            }
-            .val {
-                width: calc(100% - 150px);
+                background-color: var(--color-light-black);
             }
             textarea {
                 height: 40px;

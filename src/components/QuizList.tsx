@@ -47,7 +47,7 @@ const style = css`
     width: 750px;
     height: 500px;
     padding: 20px 30px;
-    background-color: rgb(32 36 45);
+    background-color: var(--color-light-black);
     box-shadow: var(--shadow-2);
 `;
 

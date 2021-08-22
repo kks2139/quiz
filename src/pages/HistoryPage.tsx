@@ -105,9 +105,6 @@ const style = css`
             overflow: auto;
         }
     }
-    > .popup {
-        position: fixed
-    }
 `;
 
 export default HistoryPage;

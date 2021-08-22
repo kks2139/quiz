@@ -2,14 +2,28 @@ import React, { useEffect } from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 import './Common.scss';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import {RootState} from './redux-modules/index';
 import {MainPage, StartPage, ResultPage, WrongAnswerNotePage, HistoryPage, NotFound} from './pages/index';
 import {ConfirmMessageContainer, ToastBoxContainer} from './containers/index'; 
 
 function App() {
-  const {confirmInfo, toastInfo} = useSelector((state: RootState)=> state.app);
+  const history = useHistory();
+  const state = useSelector((state: RootState)=> state);
+  const {confirmInfo, toastInfo} = state.app;
+  const {quizList} = state.quizList;
+
+  useEffect(()=>{
+    const {pathname} = window.location;
+    if(pathname === '/main' || 
+       pathname === '/result' || 
+       pathname === '/note' || 
+       pathname === '/history')
+    {
+      if(quizList.length === 0) history.push('/'); 
+    }
+  });
   
   return (
     <div css={style}>
