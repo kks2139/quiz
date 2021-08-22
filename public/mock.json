@@ -1,0 +1,377 @@
+[
+  {
+    "response_code": 0,
+    "results": [
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "How would one say goodbye in Spanish?",
+        "correct_answer": "Adi&oacute;s",
+        "incorrect_answers": [
+          " Hola",
+          "Au Revoir",
+          "Salir"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the name of the Jewish New Year?",
+        "correct_answer": "Rosh Hashanah",
+        "incorrect_answers": [
+          "Elul",
+          "New Year",
+          "Succoss"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which American-owned brewery led the country in sales by volume in 2015?",
+        "correct_answer": "D. G. Yuengling and Son, Inc",
+        "incorrect_answers": [
+          "Anheuser Busch",
+          "Boston Beer Company",
+          "Miller Coors"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What was the first ever London Underground line to be built?",
+        "correct_answer": "Metropolitan Line",
+        "incorrect_answers": [
+          "Circle Line",
+          "Bakerloo Line",
+          "Victoria Line"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which of the following card games revolves around numbers and basic math?",
+        "correct_answer": "Uno",
+        "incorrect_answers": [
+          "Go Fish",
+          "Twister",
+          "Munchkin"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What machine element is located in the center of fidget spinners?",
+        "correct_answer": "Bearings",
+        "incorrect_answers": [
+          "Axles",
+          "Gears",
+          "Belts"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which candy is NOT made by Mars?",
+        "correct_answer": "Almond Joy",
+        "incorrect_answers": [
+          "M&amp;M&#039;s",
+          "Twix",
+          "Snickers"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which of the following is the IATA code for Manchester Airport?",
+        "correct_answer": "MAN",
+        "incorrect_answers": [
+          "EGLL",
+          "LHR",
+          "EGCC"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the closest planet to our solar system&#039;s sun?",
+        "correct_answer": "Mercury",
+        "incorrect_answers": [
+          "Mars",
+          "Jupiter",
+          "Earth"
+        ]
+      },
+      {
+        "category": "General Knowledge",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What kind of aircraft was developed by Igor Sikorsky in the United States in 1942?",
+        "correct_answer": "Helicopter",
+        "incorrect_answers": [
+          "Stealth Blimp",
+          "Jet",
+          "Space Capsule"
+        ]
+      }
+    ]
+  },
+  {
+    "response_code": 0,
+    "results": [
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Along with Oxygen, which element is primarily responsible for the sky appearing blue?",
+        "correct_answer": "Nitrogen",
+        "incorrect_answers": [
+          "Helium",
+          "Carbon",
+          "Hydrogen"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Which of these stars is the largest?",
+        "correct_answer": "UY Scuti",
+        "incorrect_answers": [
+          "VY Canis Majoris",
+          "Betelgeuse",
+          "RW Cephei"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Which psychological term refers to the stress of holding contrasting beliefs?",
+        "correct_answer": "Cognitive Dissonance",
+        "incorrect_answers": [
+          "Flip-Flop Syndrome",
+          "Split-Brain",
+          "Blind Sight"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "What does the yellow diamond on the NFPA 704 fire diamond represent?",
+        "correct_answer": "Reactivity",
+        "incorrect_answers": [
+          "Health",
+          "Flammability",
+          "Radioactivity"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Myopia is the scientific term for which condition?",
+        "correct_answer": "Shortsightedness",
+        "incorrect_answers": [
+          "Farsightedness",
+          "Double Vision",
+          "Clouded Vision"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Which desert is the only desert in the world where the &quot;Saguaro&quot; cactus grows indigenously?",
+        "correct_answer": "The Sonoran Desert",
+        "incorrect_answers": [
+          "The Gobi Desert",
+          "The Yuma Desert",
+          "The Arabian Desert"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Which planet did the &quot;Viking 1&quot; spacecraft send surface images of, starting in 1976?",
+        "correct_answer": "Mars",
+        "incorrect_answers": [
+          "Saturn",
+          "Jupiter",
+          "Venus"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Down Syndrome is usually caused by an extra copy of which chromosome?",
+        "correct_answer": "21",
+        "incorrect_answers": [
+          "23",
+          "15",
+          "24"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "Where did the Great Storm of 1987 make landfall at, first?",
+        "correct_answer": "Cornwall",
+        "incorrect_answers": [
+          "Surrey",
+          "Wales",
+          "The Midlands"
+        ]
+      },
+      {
+        "category": "Science & Nature",
+        "type": "multiple",
+        "difficulty": "medium",
+        "question": "What is Hypernatremia?",
+        "correct_answer": "Increase in blood sodium",
+        "incorrect_answers": [
+          "Decrease in blood potassium",
+          "Increase in blood glucose",
+          "Decrease in blood iron"
+        ]
+      }
+    ]
+  },
+  {
+    "response_code": 0,
+    "results": [
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What was the last Aphex Twin album released before his decade-long hiatus?",
+        "correct_answer": "Drukqs",
+        "incorrect_answers": [
+          "Windowlicker",
+          "Syro",
+          "Collected Ambient Works 85-92"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "Who was not in the band &quot;The Smiths&quot;?",
+        "correct_answer": "Martin Chambers",
+        "incorrect_answers": [
+          "Morrissey",
+          "Andy Rourke",
+          "Mike Joyce"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "Who won the 1989 Drum Corps International championships?",
+        "correct_answer": "Santa Clara Vanguard",
+        "incorrect_answers": [
+          "Blue Devils",
+          "The Academy",
+          "The Bluecoats"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "Which of these is NOT a song featured on the Lockjaw EP released in 2013 by Flume &amp; Chet Faker?",
+        "correct_answer": "Left Alone",
+        "incorrect_answers": [
+          "What About Us",
+          "This Song Is Not About A Girl",
+          "Drop The Game"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What is the English title of the vaporwave track &quot;\u30ea\u30b5\u30d5\u30e9\u30f3\u30af420 \/ \u73fe\u4ee3\u306e\u30b3\u30f3\u30d4\u30e5\u30fc&quot; by Macintosh Plus (Vektroid)?",
+        "correct_answer": "Lisa Frank 420 \/ Modern Computing",
+        "incorrect_answers": [
+          "Smoke Weed 420 \/ Everyday",
+          "Make Your Move 420 \/ My Mind",
+          "It&#039;s All In Your Head 420 \/ Understand"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "Electronic artists Boys Noize and Skrillex have collaborated and released tracks under what name?",
+        "correct_answer": "Dog Blood",
+        "incorrect_answers": [
+          "Jack &Uuml;",
+          "What So Not",
+          "Noisia"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "Which lyric is about Red Hot Chili Peppers frontman Anthony Kiedis?",
+        "correct_answer": "&quot;A rainy Lithuanian \/ Is dancing as an Indian&quot;",
+        "incorrect_answers": [
+          "&quot;Fly away on, my zephyr \/ I feel it more than ever&quot;",
+          "&quot;And I liked the dimple in your chin \/ Your pale blue eyes&quot;",
+          "&quot;You used to be so warm and affectionate...but now you&#039;re quick to get into your regret&quot;"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "What is the first track on the Dave Matthews Band album &quot;Before These Crowded Streets&quot;?",
+        "correct_answer": "Pantala Naga Pampa",
+        "incorrect_answers": [
+          "Stay (Wasting Time)",
+          "Rapunzel",
+          "Don&#039;t Drink The Water"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "A Caixa Malacacheta is what kind of musical instrument which is commonly used in Latin American music?",
+        "correct_answer": "Snare Drum",
+        "incorrect_answers": [
+          "Cow Bell",
+          "Bass Drum",
+          "Maraca"
+        ]
+      },
+      {
+        "category": "Entertainment: Music",
+        "type": "multiple",
+        "difficulty": "hard",
+        "question": "When did the rapper Eazy-E die?",
+        "correct_answer": "March 26, 1995",
+        "incorrect_answers": [
+          "July 11, 1992",
+          "February 14, 1993",
+          "October 21, 1994"
+        ]
+      }
+    ]
+  }
+]

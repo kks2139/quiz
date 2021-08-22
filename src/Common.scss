@@ -1,0 +1,97 @@
+:root {
+  --radius-1: 20px;
+  --radius-2: 6px;
+  --color-blue: rgb(0, 140, 255);
+  --color-dark-blue: rgb(12, 114, 197);
+  --color-green: #00ff22;
+  --color-light-green: #00c896;
+  --color-dark-green: #008866;
+  --color-red: rgb(255, 70, 70);
+  --color-orange: rgb(255, 174, 0);
+  --color-gray: gray;
+  --color-dark-gray: rgb(75, 75, 75);
+  --color-light-gray: rgb(218, 218, 218);
+  --color-dark-navy: rgb(16, 21, 37);
+  --shadow-1: 0 5px 20px -6px black; 
+  --shadow-2: 0 10px 20px -6px black;
+  --shadow-3: 0 10px 20px -5px black;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-gray);
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 6px transparent;
+}
+
+*:focus, *:hover{outline:none;}
+
+* {
+  box-sizing: border-box;
+}
+
+[class=button], [class*='btn-'] {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  user-select:none;
+}
+
+.button {
+  width: fit-content;
+  height: 35px;
+  line-height: 36px;
+  font-size: 18px;
+  box-sizing: content-box;
+  padding: 0 15px;
+  border-radius: var(--radius-2);
+  // background-color: var(--color-light-green);
+  background-color: var(--color-blue);
+  color: white;
+  font-weight: bold;
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  transition: .2s;
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px -6px black;
+  }
+  &:active {
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.45);
+}
+
+@keyframes showUp {
+  from {left: -40px; opacity: 0;}
+  to {left: 0; opacity: 1;}
+}
+
+@keyframes appear {
+  from {transform: translate(-50%, -40%); opacity: 0;}
+  to {transform: translate(-50%, -50%); opacity: 1;}
+}
+
+@keyframes vanish {
+  0% {transform: translate(-50%, -40%); opacity: 0;}
+  20% {transform: translate(-50%, -50%); opacity: 1;}
+  80% {transform: translate(-50%, -50%); opacity: 1;}
+  100% {transform: translate(-50%, -40%); opacity: 0;}
+}
