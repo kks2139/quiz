@@ -4,12 +4,13 @@ import {css} from '@emotion/react';
 import UT from '../utils/util'; 
 import {IoMdArrowRoundDown} from 'react-icons/io';
 import {useDispatch} from 'react-redux';
-import {RouteComponentProps} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {setQuizList} from '../redux-modules/quizList';
 import {ToolTip} from '../components/index';
 
 
-function StartPage({history}: RouteComponentProps){
+function StartPage(){
+    const history = useHistory();
     const dispatch = useDispatch();
 
     const getQuizList = async ()=>{

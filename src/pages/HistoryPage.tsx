@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import { RouteComponentProps } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import {QuizHistoryListContainer, NoteListContainer} from  '../containers/index';
 import {Popup} from  '../components/index';
 import {historyInfo} from  '../utils/interfaces';
@@ -13,7 +13,8 @@ interface popInfoStateType {
     hisInfo: historyInfo | undefined
 }
 
-function HistoryPage({history}: RouteComponentProps){
+function HistoryPage(){
+    const history = useHistory();
     const dispatch = useDispatch();
     const [popInfo, setPopInfo] = useState<popInfoStateType>({
         show: false,

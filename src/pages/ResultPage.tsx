@@ -1,13 +1,14 @@
 import React from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {RouteComponentProps} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {ChartBoxContainer} from '../containers/index';
 import {ToolTip} from '../components/index';
 import {useSelector} from 'react-redux';
 import {RootState} from '../redux-modules/index';
 
-function ResultPage({history}: RouteComponentProps){
+function ResultPage(){
+    const history = useHistory();
     const quizState = useSelector((state: RootState)=> state.quizList);
     const minSec = quizState.resultInfo.resultTime.split(':').map(t => Number(t));
     const resDate = quizState.resultInfo.resultDate;

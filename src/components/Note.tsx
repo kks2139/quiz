@@ -29,7 +29,7 @@ function Note({resultFactor, index, onOpinionChanged}: Props){
                     <div className='val'>{question}</div>
                 </div>
                 <div className='row'>
-                    <div className='txt'>정답</div>
+                    <div className='txt'>답</div>
                     <div className='val'>{answer}</div>
                 </div>
                 <div className='row'>

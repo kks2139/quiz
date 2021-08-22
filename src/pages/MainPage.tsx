@@ -1,13 +1,14 @@
 import React, {useEffect, useState, useRef} from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {RouteComponentProps} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {QuizListContainer} from '../containers/index';
 import {useDispatch} from 'react-redux';
 import {Timer, AlertBox} from '../components/index';
 import {setResultTime, setResultDate} from '../redux-modules/quizList';
 
-function MainPage({history}: RouteComponentProps){
+function MainPage(){
+    const history = useHistory();
     const dispatch = useDispatch();
     const timerId = useRef(0);
     const [info, setInfo] = useState({

@@ -1,13 +1,11 @@
 import React from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {RouteComponentProps} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import {NoteListContainer} from '../containers/index';
-import {useDispatch} from 'react-redux';
-import {showConfirm} from '../redux-modules/app';
 
-function WrongAnswerNotePage({history}: RouteComponentProps){
-    const dispatch = useDispatch();
+function WrongAnswerNotePage(){
+    const history = useHistory();
     const onClickBack = ()=>{
         history.goBack();
     }

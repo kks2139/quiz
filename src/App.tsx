@@ -28,11 +28,11 @@ function App() {
   return (
     <div css={style}>
       <Switch>
-          <Route path='/' exact render={(props)=> <StartPage {...props}></StartPage>}></Route>
-          <Route path='/main' render={(props)=> <MainPage {...props}></MainPage>}></Route>
-          <Route path='/result' render={(props)=> <ResultPage {...props}></ResultPage>}></Route>
-          <Route path='/note' render={(props)=> <WrongAnswerNotePage {...props}></WrongAnswerNotePage>}></Route>
-          <Route path='/history' render={(props)=> <HistoryPage {...props}></HistoryPage>}></Route>
+          <Route path='/' exact render={()=> <StartPage/>}></Route>
+          <Route path='/main' render={()=> <MainPage/>}></Route>
+          <Route path='/result' render={()=> <ResultPage/>}></Route>
+          <Route path='/note' render={()=> <WrongAnswerNotePage/>}></Route>
+          <Route path='/history' render={()=> <HistoryPage/>}></Route>
           <Route component={NotFound}></Route>
       </Switch>
       {confirmInfo.show ? <ConfirmMessageContainer></ConfirmMessageContainer> : null}
