@@ -56,7 +56,7 @@ function QuizCard({quiz, quizNumber, size, onClickNext, onFactorSelected}: Props
                     {factors.map((fact, i) => (
                         <div key={fact} className='fact' onClick={onClickFact} data-fact={fact}>
                             <div className='txt'>
-                                <span>{`${i+1}.`}</span>
+                                <span data-testid='f1'>{`${i+1}.`}</span>
                                 <div>{fact}</div>
                             </div>
                             <div className='line'></div>
@@ -68,7 +68,6 @@ function QuizCard({quiz, quizNumber, size, onClickNext, onFactorSelected}: Props
                     : null
                 }
             </section>
-            {/* {info.selected ? <ToastBox type={info.correct ? 'o' : 'x'}></ToastBox> : null} */}
         </div>
     );
 }

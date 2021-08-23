@@ -86,7 +86,6 @@ const style = css`
     height: 100vh;
     padding: 30px 0;
     color: white;
-    border: 1px solid gray;
     > .wrapper {
         width: 900px;
         > .header {

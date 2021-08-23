@@ -16,10 +16,6 @@ interface Props {
 }
 
 function ChartBox({dataList, colorList, showLabel=true}: Props){
-    const list = [
-        {x: 3, y: 12, name: 'test1'},
-        {x: 7, y: 20, name: 'test2'},
-    ]
     return (
         <div css={style}>
             <VictoryPie 

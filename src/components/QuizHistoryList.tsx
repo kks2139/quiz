@@ -24,7 +24,6 @@ function QuizHistoryList({historyList, onClickCard}: Props){
             {historyList.length === 0 ? (
                 <div className='empty'>
                     <div className='txt'>아직 저장된 퀴즈 결과가 없어요.</div>
-                    <div className='txt'>퀴즈를 풀고 오답노트를 작성/저장 해보세요 !</div>
                 </div>
             ) : null}
         </div>

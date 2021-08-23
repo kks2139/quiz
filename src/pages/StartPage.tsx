@@ -15,7 +15,7 @@ function StartPage(){
 
     const getQuizList = async ()=>{
         const result = await UT.request('mock.json');
-        dispatch(setQuizList(result[UT.rand(2)].results));
+        dispatch(setQuizList(result[UT.rand(3)].results));
     }
 
     useEffect(()=>{
