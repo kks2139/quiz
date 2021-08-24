@@ -15,7 +15,8 @@ function App() {
   const {quizList} = state.quizList;
 
   useEffect(()=>{
-    const {pathname} = window.location;
+    const rootPath = process.env.PUBLIC_URL;
+    const pathname = window.location.pathname.replace(rootPath, '');
     if(pathname === '/main' || 
        pathname === '/result' || 
        pathname === '/note' || 
@@ -23,7 +24,7 @@ function App() {
     {
       if(quizList.length === 0) history.push('/'); 
     }
-  });
+  }, []);
   
   return (
     <div css={style}>
