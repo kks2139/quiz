@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 import {historyInfo} from '../utils/interfaces';
@@ -32,7 +32,7 @@ function QuizHistoryList({historyList, onClickCard}: Props){
 
 const style = css`
     height: 100%;
-    padding: 20px;
+    padding: 15px;
     > .empty {
         font-size: 20px;
         text-align: center;

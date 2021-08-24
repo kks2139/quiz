@@ -83,11 +83,12 @@ function HistoryPage(){
 const style = css`
     display: flex;
     justify-content: center;
-    height: 100vh;
-    padding: 30px 0;
+    min-height: 100vh;
+    padding: 20px 0;
     color: white;
     > .wrapper {
         width: 900px;
+        height: calc(100vh - 50px);
         > .header {
             display: flex;
             justify-content: space-between;
@@ -103,6 +104,18 @@ const style = css`
             height: calc(100% - 50px);
             box-shadow: 0 10px 30px -7px black;
             overflow: auto;
+        }
+    }
+
+    @media screen and (max-width: 800px){
+        > .wrapper {
+            width: unset;
+            height: calc(100vh - 85px);
+            > .header {
+                flex-direction: column;
+                height: 90px;
+                margin-bottom: 10px;
+            }
         }
     }
 `;

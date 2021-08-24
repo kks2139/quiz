@@ -83,6 +83,18 @@ const style = css`
             justify-content: space-between;
             height: 70px;
             width: 100%;
+            transition: .3s;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .quiz-wrapper {
+            > .header {
+                flex-direction: column;
+                align-items: flex-start;
+                height: 100px;
+                transform: translateY(-20px);
+            }
         }
     }
 `;

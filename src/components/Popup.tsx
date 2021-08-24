@@ -1,7 +1,6 @@
 import React from "react";
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {VscClose} from 'react-icons/vsc';
 import {IoIosCloseCircleOutline} from 'react-icons/io';
 
 interface Props {
@@ -50,6 +49,10 @@ const style = css`
     }
     > .content {
         height: calc(100% - 50px);
+    }
+
+    @media screen and (max-width: 800px){
+        width: calc(100% - 100px) !important;
     }
 `;
 

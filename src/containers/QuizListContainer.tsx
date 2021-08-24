@@ -13,7 +13,7 @@ interface Props {
 
 function QuizListContainer({onQuizFinished, onLastSelected}: Props){
     const dispatch = useDispatch();
-    const quizState = useSelector((state: RootState) => state.quizList);
+    const {quizList} = useSelector((state: RootState) => state.quizList);
 
     
     const onSelected = (factor: selectedFactor, isLast: boolean)=>{
@@ -42,7 +42,7 @@ function QuizListContainer({onQuizFinished, onLastSelected}: Props){
     }, []);
 
     return (
-        <QuizList quizList={quizState.quizList} onSelected={onSelected} onFinished={onFinished} onNext={onNext}></QuizList>
+        <QuizList quizList={quizList} onSelected={onSelected} onFinished={onFinished} onNext={onNext}></QuizList>
     );
 }
 

@@ -45,10 +45,15 @@ function QuizList({quizList, onSelected, onFinished, onNext}: Props){
 
 const style = css`
     width: 750px;
-    height: 500px;
+    min-height: 500px;
     padding: 20px 30px;
     background-color: var(--color-light-black);
     box-shadow: var(--shadow-2);
+
+    @media screen and (max-width: 800px) {
+        width: calc(100vw - 100px);
+        min-height: 500px;
+    }
 `;
 
 export default QuizList;

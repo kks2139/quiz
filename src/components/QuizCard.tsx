@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 import {quiz} from '../utils/interfaces';
 import UT from '../utils/util';
-import {ImCheckboxChecked} from 'react-icons/im';
 import {selectedFactor} from '../utils/interfaces';
-import {ToastBox} from '../components/index';
+
+interface state {
+    selected: boolean
+    correct: boolean
+    factors: string[]
+}
 
 interface Props {
     quiz: quiz
@@ -16,19 +20,16 @@ interface Props {
 }
 
 function QuizCard({quiz, quizNumber, size, onClickNext, onFactorSelected}: Props){
-    const [info, setInfo] = useState({
-        selected: false,
-        correct: false
-    });
-    const [correct, setCorrect] = useState(false);
     const {question, correct_answer, incorrect_answers} = quiz;
-    const factors = incorrect_answers.concat(correct_answer);
-    // const factors = incorrect_answers.slice();
-    // factors.splice(UT.rand(4), 0, correct_answer); // 정답을 섞어넣는다.
+    const [info, setInfo] = useState<state>({
+        selected: false,
+        correct: false,
+        factors: []
+    });
 
     const onClickFact = (e: React.MouseEvent<HTMLDivElement>)=>{
         const fact = e.currentTarget.dataset.fact!
-        const correct = fact === correct_answer
+        const correct = fact === correct_answer;
 
         if(!info.selected){
             e.currentTarget.classList.add('selected');
@@ -41,9 +42,19 @@ function QuizCard({quiz, quizNumber, size, onClickNext, onFactorSelected}: Props
             setInfo({
                 selected: true,
                 correct,
+                factors: info.factors
             });
         }
     }
+
+    useEffect(()=>{
+        const list = incorrect_answers.slice();
+        list.splice(UT.rand(3), 0, correct_answer);
+        setInfo({
+            ...info,
+            factors: list
+        });
+    }, [quiz]);
 
     return (
         <div css={style}>
@@ -53,7 +64,7 @@ function QuizCard({quiz, quizNumber, size, onClickNext, onFactorSelected}: Props
             </div>
             <section>
                 <div className='factors'>
-                    {factors.map((fact, i) => (
+                    {info.factors.map((fact, i) => (
                         <div key={fact} className='fact' onClick={onClickFact} data-fact={fact}>
                             <div className='txt'>
                                 <span data-testid='f1'>{`${i+1}.`}</span>
@@ -79,7 +90,7 @@ const style = css`
     color: white;
     .header {
         background-color: var(--color-dark-navy);
-        padding: 20px 0 0 20px;
+        padding: 20px 0 3px 20px;
         box-shadow: var(--shadow-1);
     }
     .num {
@@ -87,7 +98,7 @@ const style = css`
     }
     .question {
         width: calc(100% - 60px);
-        height: 80px;
+        min-height: 80px;
         font-size: 18px;
         line-height: 35px;
         margin: 15px 0;
@@ -97,10 +108,12 @@ const style = css`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-top: 10px;
         .button {
             margin: 0 auto;
             width: 220px;
             text-align: center;
+            margin-top: 10px;
         }
     }
     .factors {
@@ -136,6 +149,14 @@ const style = css`
             color: var(--color-orange);
             .line {
                 width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .header {
+            .question {
+                height: unset;
             }
         }
     }

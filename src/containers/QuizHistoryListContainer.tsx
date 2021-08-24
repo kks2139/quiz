@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {QuizHistoryList} from '../components/index';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import { RootState } from '../redux-modules/index';
 import {historyInfo} from '../utils/interfaces';
 import UT from '../utils/util';

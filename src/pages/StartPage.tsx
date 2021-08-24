@@ -15,7 +15,7 @@ function StartPage(){
 
     const getQuizList = async ()=>{
         const result = await UT.request('mock.json');
-        dispatch(setQuizList(result[UT.rand(3)].results));
+        dispatch(setQuizList(result[UT.rand(5)].results));
     }
 
     useEffect(()=>{
@@ -35,7 +35,7 @@ function StartPage(){
             <div className='txt'>클릭하여 퀴즈를 풀어보세요!</div>
             <IoMdArrowRoundDown size='40'></IoMdArrowRoundDown>
             <div className='btn-wrapper'>
-                <ToolTip text='퀴즈는 3가지 카테고리중 하나가 선택됩니다.'>
+                <ToolTip text='퀴즈는 5가지 카테고리중 하나가 선택됩니다.'>
                     <div className='menu-btn' data-type='quiz' onClick={onClick}>퀴즈 풀기</div>
                 </ToolTip>
                 <ToolTip text='퀴즈를 풀고 저장한 결과를 볼 수 있습니다.'>

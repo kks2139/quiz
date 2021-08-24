@@ -1,6 +1,6 @@
 import React from 'react';
 import {ChartBox} from '../components/index';
-import {useSelector, useDispatch} from 'react-redux';
+import {useSelector} from 'react-redux';
 import { RootState } from '../redux-modules/index';
 import {selectedFactor} from '../utils/interfaces';
 

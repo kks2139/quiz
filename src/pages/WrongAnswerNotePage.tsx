@@ -29,10 +29,11 @@ const style = css`
     position: relative;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 30px;
     > .wrapper {
         width: 800px;
+        height: calc(100vh - 50px);
         color: white;
         > .header {
             display: flex;
@@ -49,6 +50,20 @@ const style = css`
             width: 100%;
             height: calc(100% - 80px);
             padding: 20px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        > .wrapper {
+            > .header {
+                flex-direction: column;
+                align-items: flex-start;
+                height: 90px;
+                margin-bottom: 10px;
+                > .button {
+
+                }
+            }
         }
     }
 `;

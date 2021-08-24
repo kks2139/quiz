@@ -2,8 +2,6 @@ import React, { useEffect, useState, useRef } from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 import {MdTimelapse} from 'react-icons/md';
-import {useDispatch} from 'react-redux';
-
 
 interface Props {
     startTimer: boolean

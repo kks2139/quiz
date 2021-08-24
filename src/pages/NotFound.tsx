@@ -36,6 +36,9 @@ const style = css`
             margin-top: 30px;
         }
     }
+    .txt {
+        min-width: 390px;
+    }
 `;
 
 export default NotFound;

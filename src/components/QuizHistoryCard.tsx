@@ -66,6 +66,13 @@ const style = css`
     &:hover {
         box-shadow: 0 0 0 2px var(--color-dark-blue);
     }
+
+    @media screen and (max-width: 800px){
+        > .info {
+            font-size: 19px;
+            width: 300px;
+        }
+    }
 `;
 
 export default QuizHistoryCard;

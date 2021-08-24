@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
 import {selectedFactor} from '../utils/interfaces';
@@ -68,7 +68,7 @@ const style = css`
         font-weight: bold;
         .row {
             display: flex;
-            height: 60px;
+            min-height: 60px;
             > div {
                 display: flex;
                 align-items: center;
@@ -86,6 +86,7 @@ const style = css`
             }
             .ta {
                 flex-grow: 1;
+                width: calc(100% - 150px);
                 background-color: var(--color-light-black);
             }
             textarea {

@@ -1,9 +1,6 @@
 import React from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {useSelector, useDispatch} from 'react-redux';
-import {RootState} from '../redux-modules/index';
-import {showConfirm} from '../redux-modules/app';
 
 interface Props {
     onClickButton: (arg: React.MouseEvent<HTMLDivElement>)=>void

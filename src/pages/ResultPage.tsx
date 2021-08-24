@@ -81,6 +81,7 @@ const style = css`
             transform: translateY(-5px);
             font-size: 35px;
             font-weight: bold;
+            transition: .3s;
             > .txt span {
                 font-size: 18px;
                 margin-left: 20px;
@@ -95,6 +96,7 @@ const style = css`
         > .content {
             display: flex;
             box-shadow: var(--shadow-2);
+            transition: .3s;
             > .result-info {
                 display: flex;
                 flex-direction: column;
@@ -124,6 +126,34 @@ const style = css`
                 animation-name: showUp;
                 animation-duration: 1s;
                 animation-timing-function: ease;
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        align-items: unset;
+        .wrapper {
+            > .header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                > .txt {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .content {
+            flex-direction: column;
+            > .result-info {
+                width: 100% !important;
+                font-size: 20px !important;
+                > .info {
+                    margin-bottom: 30px !important;
+                }
+            }
+            > .chart-wrapper {
+                display: flex;
+                justify-content: center;
             }
         }
     }

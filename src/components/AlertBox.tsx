@@ -1,7 +1,6 @@
 import React from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {FaCheck} from 'react-icons/fa';
 
 interface Props {
     msg: string

@@ -1,7 +1,7 @@
 import React from 'react';
 /** @jsxImportSource @emotion/react */
 import {css} from '@emotion/react';
-import {VictoryPie, VictoryChart} from 'victory';
+import {VictoryPie} from 'victory';
 
 interface dataListType {
     x: string
@@ -64,6 +64,18 @@ const style = css`
                 border-radius: var(--radius-2);
             }
         }
+    }
+
+    @media screen and (max-width: 800px) {
+        display: flex;
+        > .info {
+            flex-direction: column;
+            > .wrapper {
+                min-width: 100px;
+                height: 35px;
+            }
+        }
+
     }
 `;
 

@@ -26,6 +26,12 @@ function renderApp() {
 }
 
 function getMenuButtons() {
+  global.fetch = jest.fn().mockResolvedValue({
+    result: {
+      status: 1,
+      result: "Dale Seo",
+    },
+  });
   renderApp();
   const button1 = screen.getByText('퀴즈 풀기');
   const button2 = screen.getByText('기록 보기');
@@ -40,7 +46,7 @@ describe('[ 메뉴 링크 테스트 ]', () => {
   });
   
   test('#2 메인 페이지 렌더링', async () => {
-    mockFetch();
+    // mockFetch();
     const {button1} = getMenuButtons();
     userEvent.click(button1);
 
