@@ -90,7 +90,9 @@ const style = css`
             }
         }
     }
-
+    .modal {
+        z-index: 99;
+    }
 `;
 
 export default ConfirmMessage;

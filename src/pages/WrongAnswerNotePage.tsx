@@ -59,6 +59,7 @@ const style = css`
                 flex-direction: column;
                 align-items: flex-start;
                 height: 90px;
+                padding-left: 10px;
                 margin-bottom: 10px;
                 > .button {
 

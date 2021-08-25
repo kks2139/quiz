@@ -87,7 +87,8 @@ const style = css`
     padding: 20px 0;
     color: white;
     > .wrapper {
-        width: 900px;
+        max-width: 900px;
+        width: calc(100% - 100px);
         height: calc(100vh - 50px);
         > .header {
             display: flex;
@@ -111,6 +112,7 @@ const style = css`
         > .wrapper {
             width: unset;
             height: calc(100vh - 85px);
+            width: calc(100vw - 19px);
             > .header {
                 flex-direction: column;
                 height: 90px;

@@ -7,6 +7,7 @@ import {useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import {setQuizList} from '../redux-modules/quizList';
 import {ToolTip} from '../components/index';
+import {quizResponse} from '../utils/interfaces';
 
 
 function StartPage(){
@@ -15,6 +16,13 @@ function StartPage(){
 
     const getQuizList = async ()=>{
         const result = await UT.request('mock.json');
+        result.forEach((res1: quizResponse) => {
+            res1.results.forEach(quiz => {
+                quiz.question = UT.htmlToText(quiz.question);
+                quiz.correct_answer = UT.htmlToText(quiz.correct_answer);
+                quiz.incorrect_answers = quiz.incorrect_answers.map(inc => UT.htmlToText(inc));
+            });
+        });
         dispatch(setQuizList(result[UT.rand(5)].results));
     }
 

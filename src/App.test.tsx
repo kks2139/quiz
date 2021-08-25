@@ -7,7 +7,7 @@ import {createStore} from 'redux';
 import rootReducer from './redux-modules/index';
 import userEvent from '@testing-library/user-event';
 import mock from '../public/mock.json';
-import {ChartBox, Popup, QuizCard} from './components/index';
+import {ChartBox, Popup, QuizCard, Note} from './components/index';
 
 function mockFetch(){
   const list = JSON.parse(JSON.stringify(mock));
@@ -145,7 +145,38 @@ describe('<QuizCard/>', ()=>{
     
     const nextButton = screen.getByText('다음 문항');
     expect(nextButton).toBeInTheDocument;
+  });
+});
 
+describe('<Note/>', ()=>{
+  test('오답노트 렌더링', ()=>{
+    const resultFactor = {
+      question: '우리나라의 수도는?',
+      answer: '서울',
+      pick: '부산',
+      correct: false,
+      opinion: '공부하자.',
+    }
+
+    render(
+      <Note 
+        resultFactor={resultFactor}
+        index={1} 
+        onOpinionChanged={()=>{}}/>
+    );
+
+    const question = screen.getByText('우리나라의 수도는?');
+    expect(question).toBeInTheDocument;
+    
+    const txt = screen.getByText('나의 답');
+    expect(txt).toBeInTheDocument;
+
+    const wrong = screen.getByText('부산');
+    expect(wrong).toBeInTheDocument;
+    
+    const opi = screen.getByText('공부하자.');
+    expect(opi).toBeInTheDocument;
+    
     screen.debug();
   });
 });

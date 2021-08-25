@@ -25,7 +25,6 @@ function NoteListContainer({info}: Props){
     }
 
     const onOpinionChanged = (opinion: string, index: number)=>{
-        console.log(resultList);
         const newList = resultList.map((res, i) => {
             res.opinion = i === index ? opinion : res.opinion;
             return res;

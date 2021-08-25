@@ -13,6 +13,19 @@ const UT = {
     rand : (n: number) => { // 0 이상 ~ n 미만 랜덤숫자 리턴
         return Math.floor(Math.random() * 10) % n;
     },
+    htmlToText : (s: string) => { 
+        const html = [
+            ['&lt;', ' '],
+            ['&gt;', '<'],
+            ['&nbsp;', '>'],
+            ['&amp;', '&'],
+            ['&quot;', '"'],
+            ['&apos;', "'"],
+            ['&#039;', "'"]
+        ];
+        html.forEach(h => s = s.split(h[0]).join(h[1]));
+        return s;
+    },
     localeStringToTime : (str: string)=>{
         const arr = str.split('.').join('').split(':').join(' ').split(' ');
         const nums = arr.map(a => {

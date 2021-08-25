@@ -34,7 +34,7 @@ function Note({resultFactor, index, onOpinionChanged}: Props){
                 </div>
                 <div className='row'>
                     <div className='txt'>나의 답</div>
-                    <div className='val'>{pick}</div>
+                    <div className={`val ${correct ? 'o' : 'x'}`}>{pick}</div>
                 </div>
                 <div className='row'>
                     <div className='txt'>기록할 내용</div>
@@ -74,6 +74,8 @@ const style = css`
                 align-items: center;
                 padding-left: 20px;
             }
+            .o {color: var(--color-green)}
+            .x {color: var(--color-red)}
             .txt {
                 width: 140px;
                 background-color: var(--color-dark-navy);
