@@ -49,7 +49,7 @@ function QuizCard({quiz, quizNumber, size, onClickNext, onFactorSelected}: Props
 
     useEffect(()=>{
         const list = incorrect_answers.slice();
-        list.splice(UT.rand(3), 0, correct_answer);
+        list.splice(UT.rand(4), 0, correct_answer);
         setInfo({
             ...info,
             factors: list
